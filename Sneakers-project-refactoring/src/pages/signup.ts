@@ -9,6 +9,7 @@ declare global {
   interface Window {
     handleSignup: () => Promise<void>;
     signupNotificationClose: () => void;
+    backFunc: () => void;
   }
 }
 
