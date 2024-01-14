@@ -32,6 +32,7 @@ type getSneakersFuncType = (
 export const getSneakersApi: getSneakersFuncType = async (queries) => {
   const session = new Session();
   const queryStrings = new URLSearchParams(queries as any);
+  
   if (!queries?.limit) {
     queryStrings.set("limit", "10");
   }

@@ -6,10 +6,13 @@ declare global {
   }
 }
 
+export let isSearchClicked = false;
+
 window.searchBarBtnHandler = () => {
   const searchInput = <HTMLInputElement>document.getElementById("search-input");
   const value = searchInput?.value?.trim?.();
   const params = new URLSearchParams({ search: value });
+  isSearchClicked = true;
 
   if (params.has("search") && !searchInput?.value?.trim?.()) {
     params.delete("search");
