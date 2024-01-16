@@ -122,8 +122,8 @@ export const LoginPage = (notifElement?: string) => {
         <button onclick="navigate('/signup')">Signup</button>
       </div>
 
-      <div class="self-end w-full pb-8">
-        <button onclick="handleLogin()" class="bg-black text-white w-full py-2 rounded-3xl">
+      <div class="mt-56 w-full pb-8">
+        <button onclick="handleLogin()" class="bg-black text-white w-full py-3 rounded-3xl">
           <p class="text-sm font-medium">Sign In</p>
         </button>
       </div>

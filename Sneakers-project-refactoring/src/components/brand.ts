@@ -48,7 +48,7 @@ export const BrandFilters = async (props: Match | undefined) => {
   return `
     <div>
       <p class="font-semibold text-lg">Most Popular</p>
-      <div class="flex overflow-scroll py-2 gap-2 mt-4">${Brands(
+      <div class="flex overflow-scroll py-2 gap-2 mt-1">${Brands(
         brands || [],
         props?.params?.brands
       )}</div>

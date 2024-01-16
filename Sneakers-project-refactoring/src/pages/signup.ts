@@ -123,9 +123,9 @@ export const SignupPage = (notifElement?: string) => {
           <button onclick="navigate('/')">Login</button>
         </div>
   
-        <div class="self-end w-full pb-8">
-          <button class="bg-black text-white w-full py-2 rounded-3xl" onclick="handleSignup()">
-            <p class="text-sm font-medium">Sign Up</p>
+        <div class="mt-56 w-full pb-8">
+          <button class="bg-black text-white w-full py-3 rounded-3xl" onclick="handleSignup()">
+            <p class="text-sm font-medium ">Sign Up</p>
           </button>
         </div>
       </div>

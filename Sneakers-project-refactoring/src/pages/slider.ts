@@ -1,9 +1,4 @@
 
-
-
-
-
-
 export function slider() {
     return `   
     <div id="onboarding-container">

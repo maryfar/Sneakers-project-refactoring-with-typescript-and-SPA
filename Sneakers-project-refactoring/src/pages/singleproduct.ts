@@ -23,7 +23,8 @@ export async function handelSinglePage(id: number = 1): Promise<void> {
 
 
 function renderSneakerPage(product:any) {
-   
+  const sizes = product.sizes.split("|");
+  const colors = product.colors.split("|");
     return `
     <div class="w-full">
     <img src="${product.imageURL}" class="w-full relative" />
@@ -54,16 +55,20 @@ function renderSneakerPage(product:any) {
       </div>
       <div class="flex justify-between m-2">
         <div class="flex flex-col items-start ">
-          <p class="text-xl font-semibold">Sizes</p>
-          <div class="flex gap-2  mt-2">
-         
-          </div>
+        <p class="text-xl font-semibold">Sizes</p>
+        <div class="flex gap-2 mt-2">
+          ${sizes.map((item :string) => {
+            return `<div class="border p-1 rounded-full">${item}</div>`;
+          }).join('')}
+        </div>
         </div>
         <div class="flex flex-col items-start">
           <p class="text-xl font-semibold">Colors</p>
-          <div class="flex justify-center mt-2">
-         
-          </div>
+          <div class="flex gap-2 mt-2">
+          ${colors.map((item: string) => {
+            return `<div class="border p-3 rounded-full" style="background-color:${item};"></div>`;
+          }).join('')}
+        </div>
         </div>
       </div>
       <div class="flex gap-4 m-2 justify-start items-center">
